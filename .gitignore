@@ -64,3 +64,4 @@ target/
 # project specific
 pci
 __MACOSX
+.ipynb_checkpoints
