@@ -145,3 +145,15 @@ def get_recommendations(prefs, person, similarity=sim_pearson):
     rankings.sort()
     rankings.reverse()
     return rankings
+
+
+def transform_prefs(prefs):
+    """作品ごとの評価形式に変換する"""
+    result = {}
+    for person in prefs:
+        for item in prefs[person]:
+            result.setdefault(item, {})
+
+            # Flip item and person
+            result[item][person] = prefs[person][item]
+    return result
