@@ -39,3 +39,47 @@
 - 類似度が高い人が評価しているものは高い評価となる
 - 類似度を重みとして評価と掛けあわせて推薦の材料にする
 - 評価をしていない人は、判断材料から除外する
+
+## 2.6 del.ico.us
+
+### pydelicous
+- https://delicious.com/rss
+- python2系なので3系のための書き換えが必要
+- 本のSampleは0.5なので0.6から書き換えた
+- https://code.google.com/p/pydelicious/downloads/list
+- google から消えたらPyPIからDonwloadすればよい
+ 
+### 書き換え
+- expectの書き方
+- printの書き方・out=stderr
+- obj.has_key(key): key in obj  
+- import library
+ - md5: hashlib.md5
+ - httplib: http.client
+ - StringIO: io
+ - urllib: urllib.resuqest, urllib.parse, urllib.error
+ - urllib2: 上記からparse除き
+ - urllib
+  - request
+   - Request
+   - urlopen
+   - HTTPDefaultErrorHandler
+   - HTTPPasswordMgrWithDefaultRealm
+   - HTTPBasicAuthHandler
+   - HTTPPasswordMgr
+   - HTTPHandler
+   - ProxyHandler
+   - build_opener
+   - install_opener
+  - parse
+   - urlencode
+   - quote_plus
+  - error
+   - HTTPError
+   - URLError
+- unichr: chr
+- basestring, unicode: str
+- feedparserはpython3対応しているので、pipからinstall
+- % lastcall: % self.lastcall
+- change default param empty list to None
+
